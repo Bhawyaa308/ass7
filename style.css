@@ -1,0 +1,112 @@
+/* Pastel color palette */
+:root {
+  --bg: #fdf6f0;
+  --pink: #f8c8dc;
+  --mint: #c4fcef;
+  --lavender: #e3dffd;
+  --yellow: #fff6a5;
+  --text: #555;
+  --completed: #aaa;
+}
+
+/* General page style */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #8b6fcb;
+  margin-bottom: 20px;
+}
+
+/* Input area */
+.task-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-input input,
+.task-input textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.task-input button {
+  background-color: var(--mint);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.task-input button:hover {
+  background-color: var(--lavender);
+}
+
+/* Task list styling */
+.task {
+  background: var(--pink);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task.completed .title,
+.task.completed .description {
+  text-decoration: line-through;
+  color: var(--completed);
+}
+
+/* Buttons for each task */
+.task button {
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.task button:hover {
+  opacity: 0.8;
+}
+
+.mark-btn {
+  background-color: var(--mint);
+}
+
+.edit-btn {
+  background-color: var(--yellow);
+}
+
+.delete-btn {
+  background-color: var(--lavender);
+}
